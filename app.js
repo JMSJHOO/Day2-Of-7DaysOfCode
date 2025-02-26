@@ -13,15 +13,15 @@ function enviarFormulario(){
     
 
 
-    if(nombre.length === 0 || nombre === '' || nombre === 'undefined' || nombre.length < 3){
-        errorNombre.textContent ='!ngrese un nombre válido y debe tener mínimo 3 letras';
+    if(nombre.length === 0 || nombre === '' || nombre.length < 3){
+        errorNombre.textContent ='¡Ingrese un nombre válido! Debe tener mínimo 3 letras.';
         isValid= false;
     }else{
         errorNombre.textContent= '';
     }
     let edadNumero = Number(edad);
-    if(edadNumero === 0 || edadNumero=== '' || edadNumero < 2){
-        errorEdad.textContent ='Porfavor, ingrese su edad.';
+    if(isNaN(edadNumero) || edadNumero < 8){
+        errorEdad.textContent ='Por favor, ingrese una edad válida.';
         isValid= false;
     }else{
         errorEdad.textContent= '';
@@ -35,9 +35,7 @@ function enviarFormulario(){
         errorLenguaje.textContent= '';
     }
     if(isValid){
-        resultado.textContent='';
     // swal('Formulario enviado correctamente');
-        setTimeout(() => {
             Swal.fire({
                 title: "¡Éxito!",
                 text: "La operación se completó correctamente.",
@@ -48,7 +46,7 @@ function enviarFormulario(){
                             if(lenguaje ==='Ninguna de la lista'){
                             resultado.textContent=`Bienvenido ${nombre},
                             tu tienes ${edad} años y hasta el momento no estas estudiando nada
-                            de la que aparezca en la lista. Lo siento Muchísimo`;
+                            de la que aparezca en la lista. Lo siento Mucho.`;
                             resultado.style.color = "red";
                             }else{
                             resultado.textContent=`Bienvenido ${nombre},
@@ -58,7 +56,5 @@ function enviarFormulario(){
                     },1000);
                 }
             });
-        });
-
-    } 
-}
+        } 
+    }
