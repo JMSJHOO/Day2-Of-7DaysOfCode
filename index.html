@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7DaysOfCode</title>
+    <script src="sweetalert/sweetalert2.js"></script>>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="box-content">
+        <div class="title-content">
+            <h1 class="title">Bienvenido a 7DaysOfCode</h1>
+        </div>
+        <form class="formulario" id="resultado">
+            <div class="nombre">
+                <label class="label" for="name">¿Cuál es tu nombre?</label>
+                <input type="name" name="Nombre" id="nombre" placeholder="Ingrese tu nombre">
+                <span id="errorNombre" style="color: red;"></span>
+            </div>
+            <div class="edad">
+                <label  class="label" for="anio">¿Cuántos años tienes?</label>
+                <input type="number" name="anio" id="anio" placeholder="Tu edad">
+                <span id="errorEdad" style="color: red;"></span>
+            </div>
+            <div class="lenguajes">
+                <label  class="label" for="lenguaje" important>¿Qué lenguaje de programación estás estudiando?</label>
+                <select class="select-option" name="select" id="selection">
+                    <option value=""></option>
+                    <option value="HTML">HTML</option>
+                    <option value="SQL">SQL</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Java">Java</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Phyton">Phyton</option>
+                    <option value="Ninguna de la lista">Ninguna de la lista</option>
+                </select>
+                <span id="errorSelection" style="color: red;"></span>
+            </div>
+            <div class="boton">
+                <input class="enviar" type="submit" onclick="enviarFormulario();" value="Enviar">
+            </div>
+            <button style="display: none;" onclick="botonSalir()" id="miBoton">Salir</button>
+        </form>
+       
+    </div>
+    
+
+    <script src="app.js" defer></script>
+</body>
+</html>
