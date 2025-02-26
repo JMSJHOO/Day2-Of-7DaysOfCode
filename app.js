@@ -52,7 +52,7 @@ function enviarFormulario(){
                             resultado.style.color = "red";
                             }else{
                             resultado.textContent=`Bienvenido ${nombre},
-                            tu tienes ${edad} años y estas estudiando ${lenguaje}. Felicidades sigue estudiando`;
+                            tu tienes ${edad} años y estas estudiando ${lenguaje}. Felicidades sigue estudiando...`;
                             resultado.style.color = "blue"; // Cambiar color a verde
                             } 
                     },1000);
