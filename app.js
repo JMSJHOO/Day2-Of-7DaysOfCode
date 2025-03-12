@@ -44,9 +44,7 @@ function enviarFormulario(){
                 if (result.isConfirmed){
                     setTimeout(()=>{
                             if(lenguaje ==='Ninguna de la lista'){
-                            resultado.textContent=`Bienvenido ${nombre},
-                            tu tienes ${edad} años y hasta el momento no estas estudiando nada
-                            de la que aparezca en la lista. Lo siento Mucho.`;
+                            resultado.textContent=`Bienvenido ${nombre}, tu tienes ${edad} años y hasta el momento no estas estudiando nada de la que aparezca en la lista. Lo siento Mucho.`;
                             resultado.style.color = "red";
                             }else{
                             resultado.textContent=`Bienvenido ${nombre},
